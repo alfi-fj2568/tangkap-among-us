@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1, h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin: 5px;
+}
+
+.start {
+  display: block;
+  margin: auto;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  background: url(../img/Truck.png) bottom center no-repeat;
+  cursor: grab;
+}
+
+.container:active {
+  cursor: grabbing;
+}
+
+.truck {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.truck::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 108px;
+  background: url(../img/Truck.png) bottom center no-repeat;
+  background-color: white;
+  background-size: 90%;
+  position: absolute;
+  bottom: 0;
+}
+
+.among-us {
+  width: 100%;
+  height: 100%;
+  background: url(../img/Among\ Us.png) bottom center no-repeat;
+  background-size: 35%;
+  position: absolute;
+  top: 147px;
+  left: 30px;
+  transition: top .3s;
+}
+
+.truck.muncul .among-us {
+  top: -65px;
+}
+
